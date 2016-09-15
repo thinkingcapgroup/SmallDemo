@@ -11,7 +11,7 @@
 
 * Adding new pages:
  * Open up server.js
- * Scroll down to “//pages”
+ * Scroll down to “Routes”
  * Insert:
  ```app.get(‘/[yourpage]’, function(req,res){
 		res.render(‘[yourpage]’;
