@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h2>User Profile</h2>
+  <ul>
+    <li>
+      id: {{user.id}}
+    </li>
+    <li>
+      email: {{#each user.emails}} {{ value }} {{/each}}
+    </li>
+    <li>
+      name: {{user.displayName}}
+    </li>
+  </ul>
+  <a href='/logout'>Log Out</a>
+</div>
