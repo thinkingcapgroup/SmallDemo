@@ -1,9 +1,14 @@
 
 
 <div class="page-header">
+	{{#if loggedIn}}
+		<a class='btn btn-primary' href='/logout' style='float: right;'>Logout</a>
+	{{else}}
+		<a class='btn btn-primary' href='/auth/google' style='float: right;'>Sign in with Google</a>
+	{{/if}}
 	<h1 id="check">{{title}} Demo</h1>
-		<a href='/login'>Login</a>
-		<a href='/profile'>Profile</a>
+	<a href='/profile'>Profile</a>
+
 </div>
 
 <div id = "gameInfo">

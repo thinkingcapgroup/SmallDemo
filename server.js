@@ -65,6 +65,8 @@ app.get('/', function(req,res, next){
 	var model = {};
 	model.title = 'Mars University';
 
+	model.loggedIn = req.isAuthenticated();
+
 	res.render('home', model);
 });
 
@@ -83,11 +85,10 @@ app.get('/auth/google',
 app.get('/auth/google/callback',
   passport.authenticate('google',
 	{ successRedirect: '/',
-	 failureRedirect: '/login'
+	 failureRedirect: '/'
  	}
 ));
-/*app.get('auth/google/callback', passport.authenticate('google', {successRedirect: '/', failureRedirect: '/login'}));
-*/
+
 app.get('/profile', ensureAuthenticated, function(req, res){
 	var model = {};
 	model.user = req.user;
